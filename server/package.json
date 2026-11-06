@@ -1,0 +1,33 @@
+{
+  "name": "cafe-aramesh-api",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "dev": "node ../scripts/dev-api.js",
+    "start": "node --env-file-if-exists=.env dist/index.js",
+    "test": "npm run build && node --test --test-concurrency=1",
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "class-transformer": "^0.5.1",
+    "class-validator": "^0.15.1",
+    "express": "^5.1.0",
+    "express-rate-limit": "^8.1.0",
+    "helmet": "^8.1.0",
+    "mongoose": "^9.0.0",
+    "nodemailer": "^10.3.1",
+    "reflect-metadata": "^0.2.2"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/node": "^26.6.6",
+    "mongodb-memory-server-core": "^10.2.0",
+    "supertest": "^7.1.4",
+    "typescript": "^7.0.2"
+  }
+}

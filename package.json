@@ -1,0 +1,24 @@
+{
+  "name": "cafe-aramesh",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "setup": "npm --prefix server ci && npm --prefix cafe-aramesh-final-task ci",
+    "dev": "node scripts/dev.js",
+    "dev:local": "node scripts/local-dev.js",
+    "dev:api": "npm --prefix server run dev",
+    "dev:web": "npm --prefix cafe-aramesh-final-task run dev",
+    "build": "npm --prefix server run build && npm --prefix cafe-aramesh-final-task run build",
+    "start": "npm --prefix server start",
+    "test": "npm --prefix server test",
+    "preview": "npm --prefix cafe-aramesh-final-task run preview",
+    "format": "prettier --write server/src server/test scripts cafe-aramesh-final-task/src",
+    "format:check": "prettier --check server/src server/test scripts cafe-aramesh-final-task/src",
+    "test:local": "node scripts/check-local.js",
+    "typecheck": "npm --prefix server run typecheck"
+  },
+  "devDependencies": {
+    "prettier": "^3.6.2"
+  }
+}
